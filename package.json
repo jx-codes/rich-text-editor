@@ -1,6 +1,6 @@
 {
   "name": "@jx/react-rich-text-editor",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A rich text editor for React based on tiptap",
   "type": "module",
   "scripts": {
@@ -24,8 +24,8 @@
   ],
   "sideEffects": false,
   "peerDependencies": {
-    "react": ">=17.0.0 <19.1.0",
-    "react-dom": ">=17.0.0 <19.1.0"
+    "react": ">=17.0.0 <19.2.0",
+    "react-dom": ">=17.0.0 <19.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
