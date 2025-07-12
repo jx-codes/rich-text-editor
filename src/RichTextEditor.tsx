@@ -21,6 +21,7 @@ import {
 import { Toggle } from "./toggle";
 import { cn } from "./utils";
 import { Separator } from "./separator";
+import React from "react";
 
 const TiptapToolbar = ({ editor }: { editor: Editor }) => {
   if (!editor) {
@@ -115,7 +116,7 @@ const TiptapToolbar = ({ editor }: { editor: Editor }) => {
 };
 
 export const RichTextEditor = (props: {
-  editorOptions: EditorOptions;
+  editorOptions: Partial<EditorOptions>;
   className?: string;
   onValueChange?: (value: {
     html: string;
