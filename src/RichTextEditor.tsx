@@ -3,6 +3,7 @@ import {
   EditorContent,
   type Editor,
   EditorOptions,
+  type JSONContent,
 } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import {
@@ -116,15 +117,23 @@ const TiptapToolbar = ({ editor }: { editor: Editor }) => {
 export const RichTextEditor = (props: {
   editorOptions: EditorOptions;
   className?: string;
+  onValueChange?: (value: {
+    html: string;
+    json: JSONContent;
+    text: string;
+  }) => void;
 }) => {
   const editor = useEditor({
     ...props.editorOptions,
     extensions: [StarterKit, ...(props.editorOptions.extensions || [])],
     content: props.editorOptions.content ?? "",
     onUpdate: ({ editor, transaction }) => {
-      if (props.editorOptions.onUpdate) {
-        props.editorOptions.onUpdate({ editor, transaction });
-      }
+      props.editorOptions.onUpdate?.({ editor, transaction });
+      props.onValueChange?.({
+        html: editor.getHTML(),
+        json: editor.getJSON(),
+        text: editor.getText(),
+      });
     },
     editorProps: {
       attributes: {
