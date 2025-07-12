@@ -1,0 +1,59 @@
+{
+  "name": "@jx/react-rich-text-editor",
+  "version": "0.0.0",
+  "description": "A rich text editor for React based on tiptap",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "types": "tsc",
+    "prepare": "npm run types && npm run build",
+    "lint": "eslint .",
+    "unpublish-library": "npm unpublish @jx/react-filter-store --force --registry http://localhost:4873",
+    "update-version": "npm version patch --force",
+    "publish-library": "npm run build && npm run update-version && npm publish --registry http://localhost:4873"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist",
+    "src/*.js"
+  ],
+  "sideEffects": false,
+  "peerDependencies": {
+    "@tiptap/pm": "^2.14.0",
+    "@tiptap/react": "^2.14.0",
+    "@tiptap/starter-kit": "^2.14.0",
+    "lucide-react": "^0.525.0",
+    "react": ">=17.0.0 <19.0.0",
+    "react-dom": ">=17.0.0 <19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-swc": "^0.4.0",
+    "@swc/core": "^1.7.36",
+    "@swc/helpers": "^0.5.13",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "@typescript-eslint/eslint-plugin": "^8.10.0",
+    "@typescript-eslint/parser": "^8.10.0",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.37.1",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "lucide-react": "^0.525.0",
+    "prettier": "^3.3.3",
+    "react": "^18.3.1",
+    "rollup": "^4.24.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@legendapp/state": "3.0.0-beta.31"
+  }
+}

@@ -1,0 +1,24 @@
+{
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true,
+    "editor.renderWhitespace": "all",
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "javascript.preferences.importModuleSpecifier": "non-relative",
+    "[markdown]": {
+      "editor.fontSize": 14,
+      "editor.lineHeight": 26,
+      "editor.wordWrap": "wordWrapColumn",
+      "editor.wordWrapColumn": 64,
+      "editor.lineNumbers": "off",
+      "editor.quickSuggestions": {
+        "comments": "off",
+        "strings": "off",
+        "other": "off"
+      },
+      "editor.minimap.enabled": true
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+  }
+  
