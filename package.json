@@ -1,6 +1,6 @@
 {
   "name": "@jx/react-rich-text-editor",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A rich text editor for React based on tiptap",
   "type": "module",
   "scripts": {
